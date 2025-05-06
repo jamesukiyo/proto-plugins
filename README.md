@@ -6,6 +6,7 @@ A few additional plugins for [proto](https://github.com/moonrepo/proto).
 - [dominikh/go-tools/staticcheck](https://github.com/dominikh/go-tools)
 - [sqlc-dev/sqlc](https://github.com/sqlc-dev/sqlc)
 - [golang-migrate/migrate](https://github.com/golang-migrate/migrate)
+- [mgechev/revive](https://github.com/mgechev/revive)
 
 ## Install
 ```sh
@@ -24,4 +25,8 @@ proto install --pin sqlc
 # golang-migrate/migrate
 proto plugin add migrate "source:https://raw.githubusercontent.com/jamesukiyo/proto-plugins/master/migrate.toml"
 proto install --pin migrate
+
+# mgechev/revive
+proto plugin add revive "source:https://raw.githubusercontent.com/jamesukiyo/proto-plugins/master/revive.toml"
+proto install --pin revive
 ```

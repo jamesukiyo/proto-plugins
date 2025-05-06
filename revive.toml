@@ -1,0 +1,26 @@
+name = "revive"
+type = "cli"
+
+[platform.linux]
+download-file = "revive_linux_{arch}.tar.gz"
+checksum-file = "checksums.txt"
+
+[platform.macos]
+download-file = "revive_darwin_{arch}.tar.gz"
+checksum-file = "checksums.txt"
+
+[platform.windows]
+download-file = "revive_windows_{arch}.tar.gz"
+checksum-file = "checksums.txt"
+
+[install]
+checksum-url = "https://github.com/mgechev/revive/releases/download/v{version}/{checksum_file}"
+download-url = "https://github.com/mgechev/revive/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+x86 = "386"
+
+[resolve]
+git-url = "https://github.com/mgechev/revive"
