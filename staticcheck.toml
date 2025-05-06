@@ -1,0 +1,29 @@
+name = "staticcheck"
+type = "cli"
+
+[platform.linux]
+download-file = "staticcheck_linux_{arch}.tar.gz"
+checksum-file = "staticcheck_linux_{arch}.tar.gz.sha256"
+exe-path ="staticcheck/staticcheck"
+
+[platform.macos]
+download-file = "staticcheck_darwin_{arch}.tar.gz"
+checksum-file = "staticcheck_darwin_{arch}.tar.gz.sha256"
+exe-path ="staticcheck/staticcheck"
+
+[platform.windows]
+download-file = "staticcheck_windows_{arch}.tar.gz"
+checksum-file = "staticcheck_windows_{arch}.tar.gz.sha256"
+exe-path ="staticcheck/staticcheck.exe"
+
+[install]
+download-url = "https://github.com/dominikh/go-tools/releases/download/{version}/{download_file}"
+checksum-url = "https://github.com/dominikh/go-tools/releases/download/{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+x86 = "386"
+
+[resolve]
+git-url = "https://github.com/dominikh/go-tools"
