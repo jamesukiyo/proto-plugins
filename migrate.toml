@@ -1,0 +1,27 @@
+name = "migrate"
+type = "cli"
+
+[platform.linux]
+download-file = "migrate.linux-{arch}.tar.gz"
+checksum-file = "sha256sum.txt"
+
+[platform.macos]
+download-file = "migrate.darwin-{arch}.tar.gz"
+checksum-file = "sha256sum.txt"
+
+[platform.windows]
+download-file = "migrate.windows-{arch}.zip"
+checksum-file = "sha256sum.txt"
+
+[install]
+checksum-url = "https://github.com/golang-migrate/migrate/releases/download/v{version}/{checksum_file}"
+download-url = "https://github.com/golang-migrate/migrate/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+x86 = "386"
+
+[resolve]
+git-url = "https://github.com/golang-migrate/migrate"
+
